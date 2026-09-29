@@ -1,0 +1,15 @@
+replicaCount: 3
+
+image:
+  repository: grin96/my-devops-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 8000
+  nodePort: 30080
+
+appConfig:
+  environment: "production"
+  logLevel: "INFO"
